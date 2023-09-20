@@ -12,7 +12,7 @@ class Problem
 {
     public static void Main(string[] args)
     {
-        Mat image = new Mat("C:/Users/joaod/source/repos/One Week PK/EMGUTest/EMGUTest/assets/test1.png");
+        Mat image = new Mat("./assets/test1.png", CvInvoke.ImreadModes.Color);
 
         ShapeDetection.ProcessImage(image);
          
