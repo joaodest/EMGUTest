@@ -8,16 +8,37 @@ using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using EMGUTest;
 
+
+
 class Problem
 {
+    const string imgPath = "C:\\Users\\joaod\\source\\repos\\One Week PK\\EMGUTest\\EMGUTest\\Images\\";
     public static void Main(string[] args)
     {
-        Mat image = new Mat("C:/Users/joaod/source/repos/One Week PK/EMGUTest/EMGUTest/assets/test1.png");
+        String win = "Windows screen";
 
-        ShapeDetection.ProcessImage(image);
-         
+        Mat image = new Mat();
+        
+
+        List<String> images = new List<String>();
+
+        images.Add("teste2.png");
+        images.Add("img_test1.png");
+
+        
+            image = CvInvoke.Imread($"{imgPath + images[0]}", ImreadModes.Color);
+       
+
+        var img = ShapeDetection.ProcessImage(image);
+
+        CvInvoke.Imshow("arquivo.jpg", img);
+        CvInvoke.WaitKey(0);
+        CvInvoke.DestroyWindow(win);
+
     }
 
-
 }
+
+
+
 

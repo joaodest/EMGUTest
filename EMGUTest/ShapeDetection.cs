@@ -154,10 +154,11 @@ namespace EMGUTest
                 #endregion
 
                 Mat result = new Mat();
+
                 CvInvoke.VConcat(new Mat[] { img, triangleRectangleImage, circleImage, lineImage }, result);
+
                 return result;
             }
         }
     }
 }
-
