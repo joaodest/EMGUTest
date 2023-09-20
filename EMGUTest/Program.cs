@@ -18,16 +18,17 @@ class Problem
         String win = "Windows screen";
 
         Mat image = new Mat();
-        
+
 
         List<String> images = new List<String>();
 
         images.Add("teste2.png");
         images.Add("img_test1.png");
+        images.Add("teste3.png");
 
-        
-            image = CvInvoke.Imread($"{imgPath + images[0]}", ImreadModes.Color);
-       
+
+        image = CvInvoke.Imread($"{imgPath + images[2]}", ImreadModes.Color);
+
 
         var img = ShapeDetection.ProcessImage(image);
 
